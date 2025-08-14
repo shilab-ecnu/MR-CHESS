@@ -24,14 +24,14 @@ statistics.
 
 Install the development version of *CHESS* by use of the 'devtools'
 package. Note that *CHESS* depends on the 'Rcpp' and 'RcppArmadillo'
-package, which also requires appropriate setting of Rtools and Xcode for
+packages, which also require appropriate settings of Rtools and Xcode for
 Windows and Mac OS/X, respectively.
 
 To install this package, run the following command in R
 
-```         
-library(remotes)
-install_github("xxx/CHESS")
+```{r}         
+install.packages("devtools")
+devtools::install_github("shilab-ecnu/MR-CHESS")
 ```
 
 Load the package using the following command:
@@ -42,7 +42,7 @@ library(CHESS)
 
 ### Fit CHESS using simulated data
 
-We first generate the genotype data and environmental variable:
+We first generate the genotype data and environmental variables:
 
 ```{r}
 library(mvtnorm)
@@ -86,7 +86,7 @@ gamma_1x <- gamma1_3[, 1];
 gamma_3x <- gamma1_3[, 2]
 ```
 
-Generate the exposure ($X$) and outcome ($Y$) variables With the genetic effects defined.
+Generate the exposure ($X$) and outcome ($Y$) variables with the genetic effects defined.
 
 ```{r}
 GE <- G * E_x;
@@ -179,9 +179,9 @@ pval4 <- res$Beta4.pval
 beta1_hat, se1_hat, pval1 are estimated average causal effect, corresponding standard error and p-value of beta1_hat. beta4_hat, se4_hat, pval4 are estimated heterogeneity causal effect, corresponding standard error and p-value of beta4_hat.
 
 
-### Fit CHESS using Testosterone-BD study with environmental factor sex
+### Fit CHESS using the Testosterone-BD study with environmental factor sex
 
-Furthermore, we give an example to illustrate the implements of CHESS
+Furthermore, we give an example to illustrate the implementation of CHESS
 for real data analysis. The following
 datasets ('Testosterone.GWAS.txt.gz', 'Testosterone.GWIS.txt.gz',
 'BD.GWAS.txt.gz', 'BD.GWIS.txt.gz', 'g1000_eur.bed','g1000_eur.fam',
@@ -197,12 +197,12 @@ stringname3 <- "g1000_eur";
 block_file <- "all_eur.bed";
 ```
 
-'expgwas', 'expgwis', 'outgwas', 'outgwis' are the datasets names for
-exposure GWAS, exposure GWIS, outcome GWAS and outcome GWIS,
-respectively. Here the environment variable is sex.
+'expgwas', 'expgwis', 'outgwas', and 'outgwis' are the dataset names for
+exposure GWAS, exposure GWIS, outcome GWAS, and outcome GWIS,
+respectively. Here, the environment variable is sex.
 
 These four datasets must have the following format (note that it must be
-tab delimited): including columns as SNP,CHR,BP,A1,A2,BETA,SE,P.
+tab delimited): including columns as SNP, CHR, BP, A1, A2, BETA, SE, P.
 
 ```{r, echo=FALSE}
 example <- read.table("example.txt", header = TRUE)
