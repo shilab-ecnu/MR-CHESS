@@ -159,6 +159,8 @@ beta1_hat, se1_hat, and pval1 are the estimated average causal effect, correspon
 ### Fit CHESS using the Testosterone-BD study with environmental factor sex
 
 Furthermore, we give an example to illustrate the implementation of CHESS for real data analysis. The following datasets ('Testosterone.GWAS.txt.gz', 'Testosterone.GWIS.txt.gz', 'BD.GWAS.txt.gz', 'BD.GWIS.txt.gz', 'g1000_eur.bed','g1000_eur.fam', 'g1000_eur.bim', 'all.bed') should be prepared. Download here: $\underline{\href{https://figshare.com/articles/dataset/Data_for_CHESS/29910116} {https://figshare.com/articles/dataset/Data_for_CHESS/29910116}}$.
+<a href="https://figshare.com/articles/dataset/Data_for_CHESS/29910116">https://figshare.com/articles/dataset/Data_for_CHESS/29910116</a>
+<a href="https://figshare.com/articles/dataset/Data_for_CHESS/29910116">CHESS Dataset on Figshare</a>
 
 ```{r}
 expgwas <- "Testosterone.GWAS.txt.gz";
