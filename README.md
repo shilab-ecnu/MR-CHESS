@@ -1,5 +1,5 @@
 # CHESS: Causal Heterogeneity using Summary Statistics
-This vignette provides an introduction to the **CHESS** package. R package **CHESS** implements CHESS for causal heterogeneity using summary statistics.
+This vignette provides an introduction to the *CHESS* package. R package *CHESS* implements CHESS for causal heterogeneity using summary statistics.
 
 Install the development version of *CHESS* by use of the 'devtools' package. Note that *CHESS* depends on the 'Rcpp' and 'RcppArmadillo' packages, which also require appropriate settings of Rtools and Xcode for Windows and Mac OS/X, respectively.
 
@@ -158,7 +158,7 @@ beta1_hat, se1_hat, and pval1 are the estimated average causal effect, correspon
 
 ### Fit CHESS using the Testosterone-BD study with environmental factor sex
 
-Furthermore, we give an example to illustrate the implementation of CHESS for real data analysis. The following datasets ('Testosterone.GWAS.txt.gz', 'Testosterone.GWIS.txt.gz', 'BD.GWAS.txt.gz', 'BD.GWIS.txt.gz', 'g1000_eur.bed','g1000_eur.fam', 'g1000_eur.bim', 'all.bed') should be prepared. Download here: $\underline{\href{https://figshare.com/articles/dataset/Data_for_CHESS/29910116 {https://figshare.com/articles/dataset/Data_for_CHESS/29910116}}$.
+Furthermore, we give an example to illustrate the implementation of CHESS for real data analysis. The following datasets ('Testosterone.GWAS.txt.gz', 'Testosterone.GWIS.txt.gz', 'BD.GWAS.txt.gz', 'BD.GWIS.txt.gz', 'g1000_eur.bed','g1000_eur.fam', 'g1000_eur.bim', 'all.bed') should be prepared. Download here: $\underline{\href{https://figshare.com/articles/dataset/Data_for_CHESS/29910116 {https://figshare.com/articles/dataset/Data_for_CHESS/29910116}}}$.
 
 ```{r}
 expgwas <- "Testosterone.GWAS.txt.gz";
